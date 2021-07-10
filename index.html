@@ -5,13 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite Phaser Game</title>
-  <script type="module" crossorigin src="./assets/index.8907642e.js"></script>
-  <link rel="modulepreload" href="./assets/vendor.0dd1e043.js">
-  <link rel="stylesheet" href="./assets/index.98618018.css">
+  <script type="module" crossorigin src="./assets/index.fb1514d2.js"></script>
+  <link rel="modulepreload" href="./assets/vendor.d4751c75.js">
+  <link rel="stylesheet" href="./assets/index.fda907f5.css">
 </head>
   <body>
     <h1>Vite Phaser Game</h1>
     <p>This is an example of setting up a Phaser, TypeScript, Vite game. See <a href="https://github.com/ubershmekel/vite-phaser-ts-starter">source on github</a>.</p>
+    <div class="window-controls">
+      <button onclick="_game.scale.toggleFullscreen()()">fullscreen</button>
+      <button onclick="_game.sound.mute = !_game.sound.mute">mute</button>
+      <button onclick="window.location.reload(true)">refresh</button>
+    </div>
     <div id="app"></div>
     
   </body>
