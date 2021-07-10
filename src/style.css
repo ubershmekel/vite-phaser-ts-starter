@@ -2,7 +2,12 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #ff3c00;
-  margin-top: 60px;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+}
+
+.window-controls {
+  margin-bottom: 0.5em;
 }

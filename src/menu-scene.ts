@@ -1,5 +1,6 @@
 import 'phaser';
 import particleUrl from '../assets/particle.png';
+import gaspUrl from '../assets/gasp.mp3';
 
 export class MenuScene extends Phaser.Scene {
   private startKey!: Phaser.Input.Keyboard.Key;
@@ -17,6 +18,7 @@ export class MenuScene extends Phaser.Scene {
     );
     this.startKey.isDown = false;
     this.load.image('particle', particleUrl);
+    this.load.audio('gasp', gaspUrl);
   }
 
   create(): void {
@@ -39,6 +41,7 @@ export class MenuScene extends Phaser.Scene {
 
   update(): void {
     if (this.startKey.isDown) {
+      this.sound.play('gasp');
       this.scene.start(this);
     }
 

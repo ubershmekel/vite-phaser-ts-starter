@@ -12,7 +12,7 @@ import 'phaser';
 import { MenuScene } from './menu-scene';
 
 const GameConfig: Phaser.Types.Core.GameConfig = {
-  title: 'Tank',
+  title: 'ExampleGame',
   url: 'https://github.com/digitsensitive/phaser3-typescript',
   version: '2.0',
   width: 800,
@@ -31,7 +31,11 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
     }
   },
   backgroundColor: '#300000',
-  render: { pixelArt: false, antialias: true }
+  render: { pixelArt: false, antialias: true },
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
 };
 
 
@@ -42,6 +46,6 @@ export class Game extends Phaser.Game {
 }
 
 window.addEventListener('load', () => {
-  const game = new Game(GameConfig);
-  console.log(game);
+  // Expose `_game` to allow debugging, mute button and fullscreen button
+  (window as any)._game = new Game(GameConfig);
 });
