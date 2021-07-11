@@ -35,6 +35,10 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
+    // `fullscreenTarget` must be defined for phones to not have
+    // a small margin during fullscreen.
+    fullscreenTarget: 'app',
+    expandParent: false,
   },
 };
 
