@@ -9,7 +9,8 @@ import './style.css'
 // `;
 
 import 'phaser';
-import { MenuScene } from './menu-scene';
+import { menu } from './menu-scene';
+
 
 const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'ExampleGame',
@@ -19,7 +20,8 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
   height: 600,
   type: Phaser.AUTO,
   parent: 'app',
-  scene: [MenuScene],
+  // `as as Phaser.Types.Scenes.SettingsConfig[]` is required until https://github.com/photonstorm/phaser/pull/6235
+  scene: [menu()] as Phaser.Types.Scenes.SettingsConfig[],
   input: {
     keyboard: true
   },
